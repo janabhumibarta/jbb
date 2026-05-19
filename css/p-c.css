@@ -1,209 +1,222 @@
-  .s-btn { 
-    height: 30px;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 13px;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    flex-shrink: 0;
-  }
+.s-btn { 
+  height: 30px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  flex-shrink: 0;
+  transform-origin: center;
+  will-change: transform;
+}
 
-  .s-btn:hover {
-    transform: scale(1.15);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    z-index: 5;
-  }
+.s-btn:hover {
+  transform: translateY(-2px) scale(1.08);
+  box-shadow: 0 4px 14px rgba(0,0,0,.15);
+  z-index: 5;
+}
 
- .btn-card {
+.btn-card {
   background: #043D98;
   padding: 0 12px;
   margin-left: 6px;
   margin-right: 2px;
 }
 
-  #pc-loader {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.85);
-    color: #fff;
-    padding: 20px 30px;
-    border-radius: 12px;
-    z-index: 10000;
-    font-family: &#39;SolaimanLipi&#39;;
-    font-size: 17px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    border: 1px solid #444;
-  }
+#pc-loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  z-index: 10000;
+  font-family: 'SolaimanLipi';
+  font-size: 17px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  border: 1px solid #444;
+}
 
-  #photocard-render-area {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-    width: 1254px;
-    height: 1254px;
-    background-image: url(&quot;https://cdn.jsdelivr.net/gh/ramimdev/hb@master/pc/Client/p-c.png&quot;);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    font-family: &#39;Hind Siliguri&#39;, Arial, sans-serif !important;
-  }
+#photocard-render-area {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 1254px;
+  height: 1254px;
+  background-image: url("https://cdn.jsdelivr.net/gh/ramimdev/hb@master/pc/Client/p-c.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: 'Hind Siliguri', Arial, sans-serif !important;
+  visibility: hidden;
+  pointer-events: none;
+}
 
-  .pc-main-body {
-    flex-grow: 1;
-    padding: 50px 50px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
-    background-size: 30px 30px;
-  }
+.pc-main-body {
+  flex-grow: 1;
+  padding: 50px 50px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
+  background-size: 30px 30px;
+}
 
-  .pc-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-  }
+.pc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
 
-
-  
-  
-  
-  
-  
 .pc-logo-bg {
-    background: #ffffff; /* ল&#2507;গ&#2507;র প&#2503;ছন&#2503;র ব&#2509;য&#2494;কগ&#2509;র&#2494;উন&#2509;ড ক&#2494;ল&#2494;র */
-    padding: 14px 27px;   /* ল&#2507;গ&#2507;র চ&#2494;রপ&#2494;শ&#2503; জ&#2494;য়গ&#2494; */
-    border-radius: 12px;  /* ক&#2507;ণ&#2494; হ&#2494;লক&#2494; গ&#2507;ল কর&#2494; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* হ&#2494;লক&#2494; ছ&#2494;য়&#2494; */
+  background: #ffffff;
+  padding: 14px 27px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.pc-logo {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+}
+
+.pc-date-box {
+  background: #b22222;
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'SolaimanLipi';
+}
+
+.pc-date-box span {
+  transform: translateY(-5px);
+}
+
+.pc-image-container {
+  width: 100%;
+  height: 530px;
+  position: relative;
+  border: 5px solid #b22222;
+  border-radius: 15px;
+}
+
+.pc-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  image-rendering: auto;
+}
+
+.pc-center-logo-box {
+  position: absolute;
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 136px;
+  height: 136px;
+  background: #ffffff;
+  border: 5px solid #2bb222;
+  border-radius: 50%;
+  padding: 5px;
+  z-index: 5;
+}
+
+.pc-content {
+  text-align: center;
+  margin-top: 80px;
+  flex-grow: 1;
+}
+
+.pc-title {
+  font-size: 60px;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.4;
+  font-family: 'SolaimanLipi';
+  padding: 0 20px;
+}
+
+.pc-title span {
+  background: linear-gradient(45deg,#ffeb3b,#ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pc-footer-red {
+  background: rgba(163, 0, 0, 0);
+  width: 100%;
+  padding: 50px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.pc-comment-pill {
+  background: #fff;
+  border: 3px solid #4a0000;
+  border-radius: 12px;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -150px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 15;
+}
+
+.pc-comment-pill span {
+  font-size: 32px;
+  color: #a30000;
+  font-weight: 900;
+  font-family: 'SolaimanLipi';
+}
+
+@media(max-width:768px){
+
+  .pc-title{
+    font-size:36px;
   }
 
-  .pc-logo {
-    height: 90px;
-    width: auto;
-    object-fit: contain;
-  }  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  .pc-date-box {
-    background: #b22222;
-    color: #fff;
-    padding: 14px 26px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 28px;
-    font-weight: bold;
-    font-family: &#39;SolaimanLipi&#39;;
+  .pc-image-container{
+    height:320px;
   }
 
-  .pc-date-box span {
-    transform: translateY(-5px);
+  .pc-date-box{
+    font-size:18px;
+    padding:10px 16px;
   }
 
-  .pc-image-container {
-    width: 100%;
-    height: 530px;
-    position: relative;
-    border: 5px solid #b22222;
-    border-radius: 15px;
+  .pc-logo{
+    height:60px;
   }
 
-  .pc-main-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-
-  .pc-center-logo-box {
-    position: absolute;
-    bottom: -55px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 136px;
-    height: 136px;
-    background: #ffffff;
-    border: 5px solid #2bb222;
-    border-radius: 50%;
-    padding: 5px;
-    z-index: 10;
-  }
-
-  .pc-content {
-    text-align: center;
-    margin-top: 80px;
-    flex-grow: 1;
-  }
-
-  .pc-title {
-    font-size: 60px;
-    font-weight: 900;
-    color: #ffffff; /* প&#2509;রথম অ&#2434;শ&#2503;র রঙ */
-    line-height: 1.4;
-    font-family: &#39;SolaimanLipi&#39;;
-    padding: 0 20px;
-  }
-
-  /* ট&#2494;ইট&#2503;ল&#2503;র দ&#2509;ব&#2495;ত&#2496;য় অ&#2434;শ&#2503;র ক&#2494;ল&#2494;র এখ&#2494;ন&#2503; ন&#2495;র&#2509;ধ&#2494;রণ কর&#2494; হয়&#2503;ছ&#2503; */
-  .pc-title span {
-    color: #ffeb3b; 
-  }
-
-  .pc-footer-red {
-    background: #a3000000;
-    width: 100%;
-    padding: 50px 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    box-sizing: border-box;
-  }
-
-  .pc-comment-pill {
-    background: #fff;
-    border: 3px solid #4a0000;
-    border-radius: 12px;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -150px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    z-index: 20;
-  }
-
-  .pc-comment-pill span {
-    font-size: 32px;
-    color: #a30000;
-    font-weight: 900;
-    font-family: &#39;SolaimanLipi&#39;;
-  }
+}
